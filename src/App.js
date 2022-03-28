@@ -1,9 +1,11 @@
 import { useEffect, useState, } from 'react';
-import sun from './imgs/Vector.png'
 import './App.css';
 import Header from './comp/Header/Header';
 function App() {
   const [cityname,setCityname] = useState('')
+  const [main,setMain] = useState('')
+  const [discrip,setDiscrip] = useState('')
+  const [temp,setTemp] = useState(0)
 
   const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
   const dayName = days[new Date().getDay()];
@@ -20,8 +22,11 @@ useEffect(() => {
       `https://api.openweathermap.org/data/2.5/weather?lat=${latit}&lon=${langit}&appid=${newapikey}`;
     let data = await fetch(url)
     let res = await data.json()
-    console.log(res.name);
+    console.log(res);
     setCityname(res.name)
+    setMain(res.weather[0].main)
+    setDiscrip(res.weather[0].description)
+    setTemp(res.main.temp)
     }
     fetching()
   });
@@ -34,7 +39,9 @@ useEffect(() => {
         {cityname}
       </div>
       <div className='todayDate'>{dayName+ ' ' +todayDate.getDate()+',' +  todayDate.getFullYear()}</div>
-
+      <div className='decrip'>{main}</div>
+      <div className='temp' >{temp}</div>
+      <div className='secondDiscrep' >{discrip}</div>
     </div>
   );
 }

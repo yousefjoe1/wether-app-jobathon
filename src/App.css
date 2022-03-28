@@ -10,16 +10,12 @@
   height: 75px;
   left: 120px;
   top: 254px;
-
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
   line-height: 75px;
-  /* identical to box height */
-
   letter-spacing: 0.05em;
-
   color: #ffffff;
 
   mix-blend-mode: normal;
@@ -31,15 +27,67 @@
   height: 23px;
   left: 120px;
   top: 339px;
-
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   letter-spacing: 0.05em;
-
   color: #ffffff;
-
   mix-blend-mode: normal;
+}
+
+.sun {
+  position: absolute;
+  border-radius: 50%;
+  left: 42.72%;
+  right: 0.76%;
+  top: 20.73%;
+  bottom: 23.81%;
+  background: #fcb641;
+}
+
+.decrip {
+  position: absolute;
+  width: 103px;
+  height: 35px;
+  left: 120px;
+  top: 510px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+}
+
+.secondDiscrep {
+  position: absolute;
+  width: 317px;
+  height: 28px;
+  left: 973px;
+  top: 532px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.temp {
+  position: absolute;
+  width: 182px;
+  height: 169px;
+  left: 1093px;
+  top: 273px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 169px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
