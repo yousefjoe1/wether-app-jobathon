@@ -6,6 +6,8 @@ function App() {
   const [main,setMain] = useState('')
   const [discrip,setDiscrip] = useState('')
   const [temp,setTemp] = useState(0)
+  const [low,setLow] = useState(0)
+  const [high,setHigh] = useState(0)
 
   const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
   const dayName = days[new Date().getDay()];
@@ -27,6 +29,17 @@ useEffect(() => {
     setMain(res.weather[0].main)
     setDiscrip(res.weather[0].description)
     setTemp(res.main.temp)
+    setLow(res.main.temp_min)
+    setHigh(res.main.temp_max)
+
+      // var celsius = Math.round((farenheit - 32)/1.8);
+      // $currentTemp.append(celsius + " C");
+      // units = "si";
+
+      // $currentTemp.html("");
+      // $currentTemp.append(farenheit + " F");
+      // units = "us"
+
     }
     fetching()
   });
@@ -41,6 +54,8 @@ useEffect(() => {
       <div className='todayDate'>{dayName+ ' ' +todayDate.getDate()+',' +  todayDate.getFullYear()}</div>
       <div className='decrip'>{main}</div>
       <div className='temp' >{temp}</div>
+      <div className='low'>{low}</div>
+      <div className='high'>{high}</div>
       <div className='secondDiscrep' >{discrip}</div>
     </div>
   );

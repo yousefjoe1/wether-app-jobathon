@@ -91,3 +91,38 @@
   letter-spacing: 0.05em;
   color: #ffffff;
 }
+
+.low {
+  position: absolute;
+  width: 52px;
+  height: 56px;
+  left: 1103px;
+  top: 453px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.high {
+  position: absolute;
+  width: 61px;
+  height: 56px;
+  left: 1216px;
+  top: 454px;
+
+  margin-left: 40px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.05em;
+
+  color: rgba(255, 255, 255, 0.75);
+}
